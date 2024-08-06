@@ -72,7 +72,5 @@ export class EditCustomerComponent implements OnInit {
         }
       );
     }
-  }
- 
+  } 
 }
- 

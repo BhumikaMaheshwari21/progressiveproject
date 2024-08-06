@@ -11,7 +11,7 @@ public class LoginResponse {
    private String roles;
    private Integer userId;
    @JsonCreator
-   public LoginResponse(@JsonProperty("token") String token ,   String roles,Integer userId) {
+   public LoginResponse(@JsonProperty("token") String token , String roles,Integer userId) {
       this.token = token;
       this.roles=roles;
       this.userId=userId;

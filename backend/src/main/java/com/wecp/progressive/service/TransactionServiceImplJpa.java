@@ -1,6 +1,5 @@
 package com.wecp.progressive.service;
 
-
 import com.wecp.progressive.entity.Accounts;
 import com.wecp.progressive.entity.Transactions;
 import com.wecp.progressive.exception.AccountNotFoundException;
@@ -10,7 +9,6 @@ import com.wecp.progressive.repository.AccountRepository;
 import com.wecp.progressive.repository.TransactionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -46,7 +44,7 @@ public class TransactionServiceImplJpa implements TransactionService {
         if (balance < transaction.getAmount() && transaction.getTransactionType().equalsIgnoreCase("debit")) {
             throw new OutOfBalanceException("Transaction amount exceeds the total balance available in the account.");
         }
-        if (transaction.getTransactionType().equalsIgnoreCase("credit")) {
+        if (transaction.getTransactionType().equals("1")) {
             balance = balance + transaction.getAmount();
         }
         else {

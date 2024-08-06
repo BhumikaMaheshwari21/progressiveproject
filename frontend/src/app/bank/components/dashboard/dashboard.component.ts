@@ -30,16 +30,14 @@ export class DashboardComponent implements OnInit {
     // this.userRole = localStorage.getItem('role');
     if(this.role=='USER'){
       this.accounts$ = this.bankService.getAccountsByUser(strUserId);
-      
-    this.transactions$ = this.bankService.getTransactionByUser(strUserId);
+      this.transactions$ = this.bankService.getTransactionByUser(strUserId);
+    } 
     
-    } else{
+    else{
       this.accounts$ = this.bankService.getAccounts();
       console.log(this.accounts$);
       this.transactions$ = this.bankService.getAllTranactions();
-    
-    }
-  
+    } 
   }
 
   deteteCustomer(customer:any):void{

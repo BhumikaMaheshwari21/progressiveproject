@@ -32,6 +32,4 @@ public class DatabaseConnectionManager {
         String password=properties.getProperty("spring.datasource.password");
         return DriverManager.getConnection(url,user,password);
     }
-   
-
 }

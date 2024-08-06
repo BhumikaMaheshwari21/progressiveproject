@@ -6,7 +6,6 @@ import { RouterModule, Routes } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { AuthInterceptor } from "./auth.interceptors";
 
-
 const routes: Routes = [
   {
     path: "auth",

@@ -26,7 +26,6 @@ export class BankService {
     return this.http.get<Customer[]>(
       `${this.baseUrl}/customers`
     );
-
   }
 
   addAccount(account: Account): Observable<Account> {

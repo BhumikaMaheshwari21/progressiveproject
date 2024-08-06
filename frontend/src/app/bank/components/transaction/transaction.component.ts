@@ -58,8 +58,6 @@ export class TransactionComponent implements OnInit {
       accounts: ["", Validators.required],
       amount: ["", Validators.required],
       transactionType: ["", Validators.required],
-      
-      
     });
   }
 
